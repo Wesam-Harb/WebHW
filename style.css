@@ -1,0 +1,422 @@
+:root {
+  --main-color: #2196f3;
+}
+.container {
+  padding: 45px;
+}
+header {
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 6px 14px rgb(0 0 0 / 10%);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 45px;
+}
+header .container .main-nav {
+  display: flex;
+  list-style-type: none;
+}
+header .main-nav > li {
+  position: relative;
+}
+header .main-nav > li a {
+  text-decoration: none;
+  color: black;
+  padding: 30px;
+  transition: all 0.3s;
+  font-size: 18px;
+  display: block;
+}
+header .main-nav > li a:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+
+header .main-nav > li a:hover::after {
+  width: 100%;
+}
+header .main-nav > li a::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  position: absolute;
+  background-color: var(--main-color);
+  transition: all 0.3s;
+}
+header h2 {
+  font-weight: bold;
+  color: var(--main-color);
+}
+.HWline {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 100px 0;
+}
+.spikes {
+  position: relative;
+}
+.spikes::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
+.names {
+  background-color: #ececec;
+  display: flex;
+  padding: 100px;
+  justify-content: center;
+}
+.card {
+  padding: 40px;
+  border-radius: 20px;
+  width: 40%;
+  background-color: white;
+  box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 40px;
+}
+.features .box {
+  border: 1px solid #ccc;
+}
+.features .image {
+  position: relative;
+  overflow: hidden;
+}
+.features .image::before {
+  content: "";
+  background-color: rgba(210, 12, 12, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.features .image::after {
+  content: "";
+  right: 0;
+  bottom: 0;
+  border-color: transparent transparent white;
+  border-width: 0px 0px 170px 500px;
+  border-style: solid;
+  position: absolute;
+  transition: 0.3s;
+}
+.features .image img {
+  max-width: 100%;
+}
+.features .container .text {
+  z-index: 3;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  line-height: 2;
+}
+.features .text span {
+  font-size: 40px;
+  text-transform: capitalize;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+.features .text span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 5px;
+  background-color: red;
+}
+.features .text p {
+  margin: 20px auto;
+  font-size: 20px;
+  color: #666;
+}
+.features .text button {
+  padding: 10px 25px;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: red;
+  border: 3px solid red;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: 0.3s;
+  position: relative;
+}
+.features .text button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 100%;
+  background-color: red;
+  z-index: -1;
+  transition: 0.3s;
+}
+.features .container .box:hover .image::after {
+  border-width: 0px 600px 170px 0px;
+}
+.features .container .box:hover button {
+  color: white;
+}
+.features .container .box:hover button::before {
+  width: 100%;
+}
+
+.features .time .image::before {
+  background-color: rgb(0 150 136 / 60%);
+}
+.features .time button {
+  color: #009688;
+  border-color: #009688;
+}
+.features .time button::before,
+.features .time span::before {
+  background-color: #009688;
+}
+
+.features .passtion .image::before {
+  background-color: rgb(3 169 244 / 60%);
+}
+.features .passtion button {
+  color: #03a9f4;
+  border-color: #03a9f4;
+}
+.features .passtion button::before,
+.features .passtion span::before {
+  background-color: #03a9f4;
+}
+
+/*  */
+.landing {
+  position: relative;
+  min-height: calc(100vh - 80px);
+}
+.landing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  z-index: -1;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+.landing .container {
+  display: flex;
+  justify-content: center;
+}
+.landing .text {
+  width: 400px;
+  padding: 50px 0;
+}
+.landing .text h1 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+.landing .text p {
+  line-height: 2;
+  font-size: 23px;
+  color: #666;
+}
+.landing .image {
+  position: relative;
+  width: 600px;
+}
+
+tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eef2f7;
+  text-align: right;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) td {
+  background: #fbfdff;
+}
+
+a.link {
+  color: #0b3d91;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a.link:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(16, 24, 40, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+h3 {
+  margin: 20px 0 12px;
+  color: #0b3d91;
+}
+table td {
+  font-size: 20px;
+}
+thead th {
+  background: linear-gradient(180deg, #0b5591, #1e7be8);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 14px;
+  text-align: right;
+  font-size: 14px;
+}
+@media (width<970px) {
+  .landing .container .image {
+    display: none;
+  }
+  .landing .container .text {
+    text-align: center;
+    flex: 1;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    height: 50px;
+  }
+  .expand-row {
+    /* height: 0; */
+    display: none;
+  }
+  img.logo {
+    max-width: 100%;
+    width: 80px;
+  }
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+  }
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #445;
+    margin-left: 12px;
+  }
+}
+
+/*  */
+
+/* Form styling */
+#addAppForm {
+  max-width: 760px;
+  margin: 28px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+  direction: rtl;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+#addAppForm label {
+  display: block;
+  font-weight: 700;
+  color: #0b3d91;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+#addAppForm input[type="text"],
+#addAppForm input[type="url"],
+#addAppForm select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e6eefb;
+  border-radius: 8px;
+  background: #fbfeff;
+  font-size: 14px;
+  color: #0b1b3a;
+  box-sizing: border-box;
+}
+
+#addAppForm input:focus,
+#addAppForm select:focus {
+  outline: none;
+  border-color: #1e7be8;
+  box-shadow: 0 0 0 4px rgba(30, 123, 232, 0.08);
+}
+
+#addAppForm .row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  #addAppForm .row {
+    flex-direction: column;
+  }
+}
+
+#addAppForm .add {
+  margin-top: 12px;
+  background: linear-gradient(180deg, #0b5591, #1e7be8);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+#addAppForm button.reset {
+  margin-top: 12px;
+  background: linear-gradient(180deg, #910b0b, #e81e1e);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+#addAppForm button[type="submit"]:hover {
+  filter: brightness(0.95);
+}
+
+/* small spacing fixes */
+#addAppForm br {
+  display: none;
+} /* optional: remove extra breaks */
+#addAppForm > * + * {
+  margin-top: 12px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Apps</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="myFunctions.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <header>
+        <div class="container">
+          <h2>Apps</h2>
+          <nav>
+            <ul class="main-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="app.html">Apps</a></li>
+              <li><a href="add_apps.html">Add Apps</a></li>
+              <li>
+                <a href="AboutUs.html">About Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </nav>
+
+    <h3>إضافة تطبيق جديد</h3>
+    <form id="addAppForm">
+      <label for="appName">اسم التطبيق:</label>
+      <input type="text" id="appName" name="appName" required /><br /><br />
+
+      <label for="developerName">اسم الشركة المطورة:</label>
+      <input
+        value="asd"
+        type="text"
+        id="developerName"
+        name="developerName"
+        required
+      /><br /><br />
+
+      <label for="usageField">مجال الاستخدام:</label>
+      <input
+        value="asdasd"
+        type="text"
+        id="usageField"
+        name="usageField"
+        required
+      /><br /><br />
+
+      <label for="isFree">مجاني / غير مجاني:</label>
+      <select id="isFree" name="isFree" required>
+        <option value="free">مجاني</option>
+        <option value="paid">غير مجاني</option></select
+      ><br /><br />
+
+      <label for="appLink">رابط التطبيق:</label>
+      <input type="url" id="downloadLink" required /><br /><br />
+      <label for="using">مجال الاستخدام:</label>
+      <select name="" id="using">
+        <option value="E-Commerce">E-Commerce</option>
+        <option value="Education">Education</option>
+        <option value="Robotics">Robotics</option>
+      </select>
+
+      <button class="add" type="button">إضافة التطبيق</button>
+      <button class="reset" type="button">اعادة</button>
+    </form>
+  </body>
+</html>
